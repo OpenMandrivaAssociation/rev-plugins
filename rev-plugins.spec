@@ -1,6 +1,6 @@
 %define name 	rev-plugins
 %define version 0.3.1
-%define release 1mdk
+%define release %mkrel 1
 
 Summary:      	A reverb plugin for LADSPA
 Name:         	%{name}
