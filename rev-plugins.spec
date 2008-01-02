@@ -11,6 +11,7 @@ Group:        	Sound
 Source:       	http://alsamodular.sourceforge.net/REV-plugins-%{version}.tar.bz2
 URL:		http://alsamodular.sourceforge.net/
 Patch0:       	rev-plugins-makefile.patch.bz2
+BuildRoot:   	%{_tmppath}/%{name}-buildroot
 Requires:	ladspa
 
 %description
