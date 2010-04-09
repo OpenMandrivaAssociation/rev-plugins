@@ -1,18 +1,17 @@
-%define name 	rev-plugins
+%define name    rev-plugins
 %define version 0.3.1
-%define release %mkrel 3
+%define release %mkrel 4
 
-Summary:      	A reverb plugin for LADSPA
-Name:         	%{name}
-Version:      	%{version}
-Release:      	%{release}
-License:	GPL
-Group:        	Sound
-Source:       	http://alsamodular.sourceforge.net/REV-plugins-%{version}.tar.bz2
-URL:		http://alsamodular.sourceforge.net/
-Patch0:       	rev-plugins-makefile.patch.bz2
-BuildRoot:   	%{_tmppath}/%{name}-buildroot
-Requires:	ladspa
+Summary:        A reverb plugin for LADSPA
+Name:           %{name}
+Version:        %{version}
+Release:        %{release}
+License:        GPLv2
+Group:          Sound
+Source:         http://www.kokkinizita.net/linuxaudio/downloads/REV-plugins-%{version}.tar.bz2
+URL:            http://www.kokkinizita.net/linuxaudio
+BuildRoot:      %{_tmppath}/%{name}-buildroot
+Requires:       ladspa
 
 %description
 This reverb is based on gverb by Juhana Sadeharju, but the code
@@ -21,8 +20,8 @@ operation, and some code to prevent FP denormalisation.
 
 %prep
 %setup -q -n REV-plugins-%{version}
-%patch0 -p1
 perl -p -i -e 's/\-O2/\$\(RPM_OPT_FLAGS\)/g' Makefile
+perl -p -i -e 's/\/usr\/lib\/ladspa/\$\(DESTDIR\)\/usr\/%_lib\/ladspa/g' Makefile
 
 %build
 %make
