@@ -39,3 +39,31 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS README
 %{_libdir}/ladspa/*.so
 
+
+
+%changelog
+* Tue Dec 07 2010 Oden Eriksson <oeriksson@mandriva.com> 0.3.1-5mdv2011.0
++ Revision: 614707
+- the mass rebuild of 2010.1 packages
+
+* Fri Apr 09 2010 Frank Kober <emuse@mandriva.org> 0.3.1-4mdv2010.1
++ Revision: 533407
+- drop patch0, update url, rebuild
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+    - rebuild
+    - kill re-definition of %%buildroot on Pixel's request
+    - use %%mkrel
+    - import rev-plugins
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+
+* Thu Aug 25 2005 Austin Acton <austin@mandriva.org> 0.3.1-1mdk
+- 0.3.1
+- build flags
+
+* Sat May 8 2004 Austin Acton <austin@mandrake.org> 0.2.1-1mdk
+- initial package
