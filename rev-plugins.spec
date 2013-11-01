@@ -4,13 +4,12 @@
 
 Summary:        A reverb plugin for LADSPA
 Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Version:        0.6.1
+Release:        1
 License:        GPLv2
 Group:          Sound
 Source:         http://www.kokkinizita.net/linuxaudio/downloads/REV-plugins-%{version}.tar.bz2
 URL:            http://www.kokkinizita.net/linuxaudio
-BuildRoot:      %{_tmppath}/%{name}-buildroot
 Requires:       ladspa
 
 %description
@@ -27,15 +26,12 @@ perl -p -i -e 's/\/usr\/lib\/ladspa/\$\(DESTDIR\)\/usr\/%_lib\/ladspa/g' Makefil
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_libdir}/ladspa
-make DESTDIR=$RPM_BUILD_ROOT install
+mkdir -p %{buildroot}%{_libdir}/ladspa
+make DESTDIR=%{buildroot} install
 
 %clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
 %doc AUTHORS README
 %{_libdir}/ladspa/*.so
 
@@ -67,3 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 
 * Sat May 8 2004 Austin Acton <austin@mandrake.org> 0.2.1-1mdk
 - initial package
+
