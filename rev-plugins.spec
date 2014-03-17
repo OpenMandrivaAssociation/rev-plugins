@@ -1,10 +1,7 @@
-%define name    rev-plugins
-%define version 0.3.1
-%define release %mkrel 5
 
 Summary:        A reverb plugin for LADSPA
-Name:           %{name}
-Version:        0.6.1
+Name:           rev-plugins
+Version:        0.7.1
 Release:        1
 License:        GPLv2
 Group:          Sound
@@ -63,4 +60,5 @@ make DESTDIR=%{buildroot} install
 
 * Sat May 8 2004 Austin Acton <austin@mandrake.org> 0.2.1-1mdk
 - initial package
+
 
