@@ -2,7 +2,7 @@
 Summary:        A reverb plugin for LADSPA
 Name:           rev-plugins
 Version:        0.7.1
-Release:        1
+Release:        2
 License:        GPLv2
 Group:          Sound
 Source:         http://www.kokkinizita.net/linuxaudio/downloads/REV-plugins-%{version}.tar.bz2
