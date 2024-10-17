@@ -6,7 +6,7 @@ Release:        2
 License:        GPLv2
 Group:          Sound
 Source:         http://www.kokkinizita.net/linuxaudio/downloads/REV-plugins-%{version}.tar.bz2
-URL:            http://www.kokkinizita.net/linuxaudio
+URL:            https://www.kokkinizita.net/linuxaudio
 Requires:       ladspa
 
 %description
