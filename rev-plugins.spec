@@ -9,6 +9,7 @@ Source:         http://www.kokkinizita.net/linuxaudio/downloads/REV-plugins-%{ve
 URL:            https://www.kokkinizita.net/linuxaudio
 Requires:       ladspa
 
+BuildRequires:	make
 %description
 This reverb is based on gverb by Juhana Sadeharju, but the code
 (now C++) is entirely original, including a second input for stereo
